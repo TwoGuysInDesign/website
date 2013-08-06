@@ -312,6 +312,14 @@ module.exports = function (grunt) {
     'usemin'
   ]);
 
+    grunt.registerTask("bumpBuild", function () {
+        var build = ".build";
+        grunt.file.write(build, parseInt(grunt.file.read(build), 10) + 1);
+    });
+
+    grunt.registerTask('publish', [
+        'build']);
+
   grunt.registerTask('default', [
     'jshint',
     'test',
