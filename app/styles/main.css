@@ -158,7 +158,7 @@ form.contact textarea {
 }
 
 .navbar-inverse .navbar-inner {
-    margin: 50px 0;
+    margin: 25px 0;
     background: none;
     box-shadow: none;
     border: none;
@@ -169,7 +169,7 @@ form.contact textarea {
     font-size: 40px;
     color: #9ed846;
     text-shadow: none;
-    padding: 20px 0;
+    padding: 10px 0;
     border-bottom: 5px solid #fff;
 }
 
@@ -295,7 +295,7 @@ form.contact textarea {
 }
 
 .container.landing {
-    margin: 165px auto 70px auto;
+    margin: 130px auto 70px auto;
 }
 
 .landing .slogan {
@@ -590,5 +590,17 @@ footer {
 
     h1, h2, h3, h4, h5 {
         text-align: center;
+    }
+}
+
+@media (max-width: 600px){
+    .navbar-inverse .brand {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 500px){
+    .navbar-inverse .brand {
+        font-size: 20px;
     }
 }
