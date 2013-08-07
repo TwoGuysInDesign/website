@@ -1,11 +1,16 @@
 'use strict'
-
-angular.module('twoGuysInDesignApp', [])
-  .config ['$routeProvider', ($routeProvider) ->
-    $routeProvider
-      .when '/',
-        templateUrl: 'views/main.html'
-        controller: 'MainCtrl'
-      .otherwise
-        redirectTo: '/'
-  ]
+###
+  Password Encoder Application
+###
+angular.module('twoGuysInDesignApp', ['ui.state'])
+  .config ($stateProvider) ->
+    $stateProvider.state('index',
+      url: ''
+      views:
+       navbar:
+         templateUrl: 'views/site/navbar.html'
+       content:
+         templateUrl: 'views/content.html'
+       footer:
+         templateUrl: 'views/site/footer.html'
+    )

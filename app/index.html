@@ -9,62 +9,226 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-        <!-- build:css({.tmp,app}) styles/main.css -->
-        <link rel="stylesheet" href="styles/bootstrap.css">
+        <!-- build:css({.tmp,app}) styles/site.css -->
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"  />
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
 </head>
-  <body ng-app="twoGuysInDesignApp">
-    <!--[if lt IE 7]>
-      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-    <![endif]-->
+  <body ng-app="twoGuysInDesignApp" data-spy="scroll" data-target=".navbar-wrapper" data-offset="70">
+     <!--[if lt IE 9]>
+    <!-- build:js scripts/ie.js -->
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <!-- endbuild -->
+    <!--[endif]-->
 
-    <!--[if lt IE 9]>
-      <script src="bower_components/es5-shim/es5-shim.js"></script>
-      <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]-->
+    <!--                                Navbar                                  -->
+<!-- ====================================================================== -->
+<!-- Menu Items float left, on smaller devices turns into a dropdown button -->
+    <div id="home" class="navbar-wrapper" data-spy="affix" data-offset-top="20">
+      <div class="container" >
 
-    <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#home">two guys in design</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav pull-right">
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#tech">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src='//www.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
 
+    <div class="container landing">
+      <h1>consulting services</h1>
+      <div class="slogan">
+        <h3>delivering high quality and innovative software</h3>
+      </div>
+    </div>
+
+<!--                              Portfolio                                 -->
+<!-- ====================================================================== -->
+<!-- Macbook Carousel, iPhone Carousel, Turns to single column on smaller   -->
+    <div id="tech" class="block green">
+      <div class="container">
+        <div class="row">
+        <br />
+          <!-- Three columns of text below the carousel -->
+          <div class="span4">
+            <h2><i class="icon-html5"></i>&nbsp;&nbsp;Front End</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+          </div><!-- /.span4 -->
+          <div class="span4">
+            <h2><i class="icon-dashboard"></i>&nbsp;&nbsp;Middleware</h2>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          </div><!-- /.span4 -->
+          <div class="span4">
+            <h2><i class="icon-puzzle-piece"></i>&nbsp;&nbsp;Back End</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          </div><!-- /.span4 -->
+        </div>
+
+          <div class="row">
+        <br />
+          <!-- Three columns of text below the carousel -->
+          <div class="span4">
+            <h2><i class="icon-group"></i>&nbsp;&nbsp;Resource Management</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+          </div><!-- /.span4 -->
+          <div class="span4">
+            <h2><i class="icon-gears"></i>&nbsp;&nbsp;Agile Development</h2>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          </div><!-- /.span4 -->
+          <div class="span4">
+            <h2><i class="icon-retweet"></i>&nbsp;&nbsp;Test Driven Development</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          </div><!-- /.span4 -->
+        </div>
+
+      </div>
+    </div>
+
+<!--                           Team Portraits                               -->
+<!-- ====================================================================== -->
+    <div id="team" class="block white">
+      <div class="container">
+        <div class="row">
+          <div class="span4">
+            <div class="caption">
+              <h1>Meet the Team</h1>
+            </div>
+            <div class="portrait-wrapper">
+              <div class="portrait">
+                <img src="img/portrait.jpg" alt="Team Portrait">
+              </div>
+              <div class="social-media">
+                <a href="#"><a href="http://www.twitter.com/ctoestreich"><i class="icon-twitter"></i></a>
+                <a href="#"><a href="http://www.linkedin.com/pub/christian-oestreich/2/47b/477"><i class="icon-linkedin"></i></a></a>
+                <a href="#"><a href="http://www.github.com/ctoestreich"><i class="icon-github"></i></a></a>
+                <a href="#"><a href="http://www.github.com/grails-plugin-consortium"><i class="icon-github"></i></a></a>
+              </div>
+            </div>
+
+          </div><!-- Span4 -->
+          <div class="span8">
+            <p class="lead">Christian Oestreich
+            </p>
+            <p>Aliquam at aliquam sapien. Donec tempor tellus non neque ultricies, nec hendrerit erat accumsan. Vestibulum magna augue, condimentum in eleifend nec, tempus et erat. Nulla facilisi. Praesent interdum vel purus non cursus. Sed dapibus augue leo, nec mollis enim gravida rutrum. Praesent consequat tempor rutrum. Donec semper odio id mi consequat, eu sollicitudin justo fermentum.</p>
+            <p>Vestibulum fringilla id felis non luctus. Proin vitae mollis neque. Praesent sed cursus mi. Morbi ac erat diam. In hac habitasse platea dictumst. Aliquam nec magna rhoncus, pretium tortor vitae, porta sem. Mauris et nunc a arcu auctor commodo. Donec fringilla rhoncus odio in malesuada. Proin eget augue vestibulum, imperdiet dolor a, tincidunt magna. Aliquam vestibulum odio et venenatis eleifend. Duis ut interdum quam. Fusce eget molestie arcu.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--                               Contact                                  -->
+<!-- ====================================================================== -->
+<!--                        Animated border on focus                        -->
+    <div id="contact" class="block green">
+      <div class="container">
+        <div class="row">
+          <div class="span4 text-center">
+            <h1>Contact</h1>
+          </div>
+        </div>
+        <br /><br />
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <form class="contact">
+            <div class="span4">
+              <div class="control-group">
+                <label class="control-label" for="inputName">Name</label>
+                <div class="controls">
+                  <input type="text" id="inputName" placeholder="Name...">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputEmail">Email</label>
+                <div class="controls">
+                  <input type="email" id="inputEmail" placeholder="Email...">
+                </div>
+              </div>
+            </div><!-- /.span4 -->
+            <div class="span8 pull-right">
+              <div class="control-group">
+                <label class="control-label" for="textareaMessage">Message</label>
+                <textarea id="textareaMessage" rows="10"></textarea>
+              </div>
+            </div>
+            <div class="span4">
+              <button type="submit" class="btn">Send Email</button>
+            </div>
+          </form>
+        </div><!-- /.row -->
+
+        <!-- FOOTER -->
+        <footer>
+          <div class="pull-left">&copy; 2013 Two Guys In Design, LLC.</div>
+          <div class="pull-right"><a class="back-to-top" href="#">Back to top</a></div>
+        </footer>
+      </div>
+
+    </div>
+
+
+       <!-- build:js({.tmp,app}) scripts/plugins.js -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-affix.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-alert.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-modal.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-transition.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-button.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-popover.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-typeahead.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-carousel.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-collapse.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-tab.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/angular.js -->
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!--<script src="scripts/libs/bootstrap/ui.bootstrap.min.js"></script>-->
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <!-- endbuild -->
 
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <!-- build:js({.tmp,app}) scripts/site.angular.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <!-- endbuild -->
 
-        <!-- build:js scripts/plugins.js -->
-        <script src="bower_components/jquery/jquery.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-affix.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-alert.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-dropdown.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-tooltip.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-modal.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-transition.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-button.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-popover.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-typeahead.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-carousel.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-scrollspy.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-collapse.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-tab.js"></script>
-        <!-- endbuild -->
+      <!-- build:js({.tmp,app}) scripts/site.master.js -->
+    <script src="scripts/init.js"></script>
+    <!-- endbuild -->
 
-        <!-- build:js scripts/modules.js -->
-        <script src="bower_components/angular-resource/angular-resource.js"></script>
-        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-        <!-- endbuild -->
+   <script>
+      var _gaq = [
+          ['_setAccount', 'UA-XXXXX-X'],
+          ['_trackPageview']
+      ];
+      (function (d, t) {
+          var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          g.src = '//www.google-analytics.com/ga.js';
+          s.parentNode.insertBefore(g, s)
+      }(document, 'script'));
+    </script>
 </body>
 </html>

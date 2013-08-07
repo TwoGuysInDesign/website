@@ -34,6 +34,10 @@ module.exports = function (grunt) {
                                  files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
                                  tasks: ['coffee:dist']
                              },
+                             coffeeDev: {
+                                 files: ['<%= yeoman.app %>/scripts/{,*/}*.coffee'],
+                                 tasks: ['coffee:dev']
+                             },
                              coffeeTest: {
                                  files: ['test/spec/{,*/}*.coffee'],
                                  tasks: ['coffee:test']
@@ -117,6 +121,20 @@ module.exports = function (grunt) {
                              ]
                          },
                          coffee: {
+                             dev: {
+                                 options: {
+                                     bare: true
+                                 },
+                                 files: [
+                                     {
+                                         expand: true,
+                                         cwd: '<%= yeoman.app %>/scripts',
+                                         src: '{,*/}*.coffee',
+                                         dest: '<%= yeoman.app %>/scripts',
+                                         ext: '.js'
+                                     }
+                                 ]
+                             },
                              dist: {
                                  options: {
                                      bare: true
@@ -155,8 +173,7 @@ module.exports = function (grunt) {
                                          '<%= yeoman.dist %>/scripts/{,*/}*.js',
                                          '<%= yeoman.dist %>/styles/{,*/}*.css',
                                          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-                                         '<%= yeoman.dist %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-                                         '<%= yeoman.dist %>/styles/fonts/*'
+                                         '<%= yeoman.dist %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                                      ]
                                  }
                              }
@@ -222,7 +239,7 @@ module.exports = function (grunt) {
                                      {
                                          expand: true,
                                          cwd: '<%= yeoman.app %>',
-                                         src: ['*.html', 'views/*.html'],
+                                         src: ['*.html', 'views/**/*.html'],
                                          dest: '<%= yeoman.dist %>'
                                      }
                                  ]
@@ -240,15 +257,13 @@ module.exports = function (grunt) {
                                          src: [
                                              '*.{ico,png,txt}',
                                              '.htaccess',
-                                             'bower_components/**/*',
                                              'images/{,*/}*.{gif,webp,svg}',
-                                             'img/{,*/}*.{gif,webp,svg}',
-                                             'styles/fonts/*'
+                                             'img/{,*/}*.{gif,webp,svg}'
                                          ]
                                      },
                                      {
                                          expand: true,
-                                         cwd: '.tmp/images',
+                                         cwd: '<%= yeoman.app %>',
                                          dest: '<%= yeoman.dist %>/images',
                                          src: [
                                              'generated/*'
@@ -256,10 +271,20 @@ module.exports = function (grunt) {
                                      },
                                      {
                                          expand: true,
-                                         cwd: '.tmp/img',
+                                         cwd: '<%= yeoman.app %>',
                                          dest: '<%= yeoman.dist %>/img',
                                          src: [
                                              'generated/*'
+                                         ]
+                                     }   ,
+                                     {
+                                         expand: true,
+                                         cwd: '<%= yeoman.app %>',
+                                         dest: '<%= yeoman.dist %>/fonts',
+                                         flatten: true,
+                                         src: [
+                                             'bower_components/font-awesome/font/{,*/}*.{otf,eot,svg,ttf,woff}',
+                                             'fonts/{,*/}*.{otf,eot,svg,ttf,woff}'
                                          ]
                                      }
                                  ]
