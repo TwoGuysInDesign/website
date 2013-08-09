@@ -17,15 +17,15 @@ script:
 #  - grunt karma:continuous
   - grunt build
 after_success:
-  - git submodule add -b gh-pages https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME} site > /dev/null 2>&1
+  - git submodule add -b master https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME} site > /dev/null 2>&1
   - cd site
-  - if git checkout gh-pages; then git checkout -b gh-pages; fi
+  - if git checkout master; then git checkout -b master; fi
   - git rm -rf .
   - cp -R ../dist/* .
   - cp ../dist/.* .
   - git add -f .
   - git config user.email "acetrike@yahoo.com"
   - git config user.name "Christian Oestreich"
-  - git commit -am "adding the yeoman build files to gh-pages"
-  - git push https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME} HEAD:gh-pages > /dev/null 2>&1
+  - git commit -am "adding the build files to website"
+  - git push https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME} HEAD:master > /dev/null 2>&1
 
