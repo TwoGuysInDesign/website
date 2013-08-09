@@ -1,27 +1,25 @@
 language: node_js
 node_js:
-  - 0.8
+- 0.8
 env:
   global:
-      secure: "ObUec1VW5xZZdgycdxrgXbRym1egeF4F0SzV2POPAdY7SzYyzMV8mEtouV3obHKvMU4qgEG/chv2NzuTpIxvRlujpx9U1qBs2OO02lLMkkfyBVcTAMoa0CYkat5MgTCgRuWrXnziSHg2kTDkWW7AC3mU9Li7g4ApHKyXy9pwbF0="
-      secure: "B5YjS+2oEoucpD2IXkcE0hMXrT/Lx/G6QRSXQg4mov8zPxI7SlcB5gAuyetO4x4B284bCnkKDVhmO4YUuKH+IK5bTFL7dCYLfSoIOQvfQCo65U7yqB5vYLl0Du8xEkdUN7H28tOEIkx2SdrFiv4SXeONS2/kMtc5gejbTW0ZE5E="
+  - secure: gJrY9xlzy9zx7d68dKSaFG6MHZLRTS1TgMScE7iJ9SYbC8q9+2f0DJi5SXY8hH1CqEb7IFCk+vNPBFH5I/+VB+Z2K6+6ZbDHqDP1iA9YrWUwhuySE6416oyUt0VIPyLp0kVmwU+OfWsGxkOh0pFo3O+C0Fn+WNdCAR/S5liXErc=
+  - secure: Sjfvs+tv0GFS1bfHtZOzQeTEepoLPvX3Vf/d3n4U8b4rBBGmyF0lphsxGQjYHuXwoU9uSbk2Gkk1G9qqaWeHTSezi6Zbm5C7h1uJFxQ5SYTBjqSB7i4eiNhpnOSZSqULl/kItO7kJ+tuOX0jA6/MBdSIe/0tsjezSQED73hhwJc=
 before_script:
-  - npm install --silent --quiet -g yo grunt-cli bower generator-travis-ci
-  - bower install
+- npm install --silent --quiet -g yo grunt-cli bower generator-travis-ci
+- bower install
 script:
-#  - grunt karma:continuous
-  - grunt build
+- grunt build
 after_success:
-  - git submodule add -f -b master https://${GH_OAUTH_TOKEN}@github.com/TwoGuysInDesign/twoguysindesign.github.com site
-  - cd site
-  - git rm -rf .
-  - cp -R ../dist/* .
-  - cp ../dist/.* .
-  - git add -f .
-  - git config user.email "acetrike@yahoo.com"
-  - git config user.name "ctoestreich"
-  - git commit -am "adding the build files to website"
-  - git push https://${GH_OAUTH_TOKEN}@github.com/TwoGuysInDesign/twoguysindesign.github.com HEAD:master
-#  > /dev/null 2>&1
-
-
+- git submodule add -f -b master https://${GH_OAUTH_TOKEN}@github.com/TwoGuysInDesign/twoguysindesign.github.com
+  site
+- cd site
+- git rm -rf .
+- cp -R ../dist/* .
+- cp ../dist/.* .
+- git add -f .
+- git config user.email "acetrike@yahoo.com"
+- git config user.name "ctoestreich"
+- git commit -am "adding the build files to website"
+- git push https://${GH_OAUTH_TOKEN}@github.com/TwoGuysInDesign/twoguysindesign.github.com
+  HEAD:master
