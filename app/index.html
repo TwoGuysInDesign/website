@@ -28,9 +28,6 @@
     <!-- endbuild -->
     <!--[endif]-->
 
-    <!--                                Navbar                                  -->
-<!-- ====================================================================== -->
-<!-- Menu Items float left, on smaller devices turns into a dropdown button -->
     <div id="home" class="navbar-wrapper" data-spy="affix" data-offset-top="20">
       <div class="container">
 
@@ -48,7 +45,6 @@
                 <li class="active"><a href="#home">Home</a></li>
                 <li><a href="#tech">Services</a></li>
                 <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
@@ -143,17 +139,6 @@
 <!--                        Animated border on focus                        -->
     <div id="contact" class="block green">
       <div class="container">
-        <div class="row">
-          <div class="span4 text-center">
-            <h1>Contact</h1>
-          </div>
-        </div>
-        <br/><br/>
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-
-        </div><!-- /.row -->
-
         <!-- FOOTER -->
         <footer>
           <div class="pull-left">&copy; 2013 Two Guys In Design, LLC.</div>
@@ -185,15 +170,13 @@
     <!-- endbuild -->
 
    <script>
-      var _gaq = [
-          ['_setAccount', 'UA-XXXXX-X'],
-          ['_trackPageview']
-      ];
-      (function (d, t) {
-          var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-          g.src = '//www.google-analytics.com/ga.js';
-          s.parentNode.insertBefore(g, s)
-      }(document, 'script'));
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-43034632-1', 'twoguysindesign.com');
+      ga('send', 'pageview');
     </script>
 </body>
 </html>
