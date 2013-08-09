@@ -24,5 +24,5 @@ after_success:
   - git config user.email "acetrike@yahoo.com"
   - git config user.name "Christian Oestreich"
   - git commit -am "adding the build files to website"
-  - git push https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME} > /dev/null 2>&1
+  - git push https://${GH_OAUTH_TOKEN}@github.com/${GH_OWNER}/${GH_PROJECT_NAME} HEAD:master > /dev/null 2>&1
 
