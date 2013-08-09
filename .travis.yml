@@ -3,11 +3,8 @@ node_js:
   - 0.8
 env:
   global:
-    - GH_OWNER: TwoGuysInDesign
-    - GH_PROJECT_NAME: twoguysindesign.github.com
-    - secure: "X0ORsfSKcis1VssUzQS+BevRxzhF4I9suXF/HsCQAet5h1yV8RqRII1kr4WFrIFwcokU2ZVInySoq8QTmUptYamt76L79lw2o2dNGCc4W+iB5evXTCxXyk5uekzcnXCObx0BAK8f19PPiNxo2GNBQfZgZCWBX4WIRh6O6Hzn2rg="
-    - secure: "CoQsJtNaF96ZROvyh4yYArT8NM/cwszqDDq6lunxK/cBo6aUIYJqNrp6unpl3PKQAKa1kGh3eqlHGLZwy1EQQEV9QFPbrlGQjxK49HJAQ+Axx7GQp34CKXCGhOyKoI5TU84bUzPiSTIB2/bNRjg7CJUGqXueOPfJiSz4+ulq/0Y="
-    - secure: "EMpOAc1O60IE1oN4dw4uzYeTrooKb3aEDMD4XilPZAxQaPVX+XKhH7d4lyUtezsXAYaizJvJboSRohec//AD+EOAehf5SRmzeilkdasGP7cdeY0XwpCNRUnx6VNIgFaYAKtv4q1EMGnGMc+D8MvGp7A/w1OkIPB6VXlITvm63WM="
+      secure: "ObUec1VW5xZZdgycdxrgXbRym1egeF4F0SzV2POPAdY7SzYyzMV8mEtouV3obHKvMU4qgEG/chv2NzuTpIxvRlujpx9U1qBs2OO02lLMkkfyBVcTAMoa0CYkat5MgTCgRuWrXnziSHg2kTDkWW7AC3mU9Li7g4ApHKyXy9pwbF0="
+      secure: "B5YjS+2oEoucpD2IXkcE0hMXrT/Lx/G6QRSXQg4mov8zPxI7SlcB5gAuyetO4x4B284bCnkKDVhmO4YUuKH+IK5bTFL7dCYLfSoIOQvfQCo65U7yqB5vYLl0Du8xEkdUN7H28tOEIkx2SdrFiv4SXeONS2/kMtc5gejbTW0ZE5E="
 before_script:
   - npm install --silent --quiet -g yo grunt-cli bower generator-travis-ci
   - bower install
@@ -22,7 +19,7 @@ after_success:
   - cp ../dist/.* .
   - git add -f .
   - git config user.email "acetrike@yahoo.com"
-  - git config user.name "Christian Oestreich"
+  - git config user.name "ctoestreich"
   - git commit -am "adding the build files to website"
   - git push https://${GH_OAUTH_TOKEN}@github.com/TwoGuysInDesign/twoguysindesign.github.com HEAD:master
 #  > /dev/null 2>&1
