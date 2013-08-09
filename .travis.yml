@@ -15,7 +15,7 @@ script:
 #  - grunt karma:continuous
   - grunt build
 after_success:
-  - git submodule -b master add https://${GH_OAUTH_TOKEN}@github.com/TwoGuysInDesign/twoguysindesign.github.com.git site > /dev/null 2>&1
+  - git submodule add -f -b master https://${GH_OAUTH_TOKEN}@github.com/TwoGuysInDesign/twoguysindesign.github.com.git site > /dev/null 2>&1
   - cd site
   - git rm -rf .
   - cp -R ../dist/* .
