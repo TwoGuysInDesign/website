@@ -1,3 +1,6 @@
 [submodule "site"]
 	path = site
-	url = https://github.com/TwoGuysInDesign/twoguysindesign.github.com.git
+	url = https://github.com/TwoGuysInDesign/twoguysindesign.github.com
+[submodule "twoguysindesign.github.com"]
+	path = twoguysindesign.github.com
+	url = https://github.com/TwoGuysInDesign/twoguysindesign.github.com
