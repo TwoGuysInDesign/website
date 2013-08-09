@@ -1,6 +1,5 @@
 (function ($) {
     $(function () {
-        $('.carousel').carousel({interval: 4000});
         $('ul.nav').scrollspy();
         $('.nav li a, a.scroll').bind('click', function (e) {
             e.preventDefault();
