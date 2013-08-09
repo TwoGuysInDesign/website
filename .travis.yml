@@ -11,8 +11,7 @@ before_script:
 script:
 - grunt build
 after_success:
-- git submodule add -f -b master https://${GH_OAUTH_TOKEN}@github.com/TwoGuysInDesign/twoguysindesign.github.com
-  site
+- git submodule add -f -b master https://${GH_OAUTH_TOKEN}@github.com/TwoGuysInDesign/twoguysindesign.github.com site
 - cd site
 - git rm -rf .
 - cp -R ../dist/* .
