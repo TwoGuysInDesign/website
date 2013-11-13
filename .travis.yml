@@ -6,7 +6,7 @@ env:
   - secure: gJrY9xlzy9zx7d68dKSaFG6MHZLRTS1TgMScE7iJ9SYbC8q9+2f0DJi5SXY8hH1CqEb7IFCk+vNPBFH5I/+VB+Z2K6+6ZbDHqDP1iA9YrWUwhuySE6416oyUt0VIPyLp0kVmwU+OfWsGxkOh0pFo3O+C0Fn+WNdCAR/S5liXErc=
   - secure: Sjfvs+tv0GFS1bfHtZOzQeTEepoLPvX3Vf/d3n4U8b4rBBGmyF0lphsxGQjYHuXwoU9uSbk2Gkk1G9qqaWeHTSezi6Zbm5C7h1uJFxQ5SYTBjqSB7i4eiNhpnOSZSqULl/kItO7kJ+tuOX0jA6/MBdSIe/0tsjezSQED73hhwJc=
 before_script:
-- npm install --silent --quiet -g yo grunt-cli bower generator-travis-ci
+- npm --registry http://npm.nodejs.org.au:5984/registry/_design/app/_rewrite install --silent --quiet -g yo grunt-cli bower generator-travis-ci
 - bower install
 script:
 - grunt build
