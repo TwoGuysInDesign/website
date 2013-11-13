@@ -1,6 +1,6 @@
 {
     "name": "twoGuysInDesign",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "dependencies": {
         "json3": "~3.2.4",
         "jquery": "~1.9.1",
